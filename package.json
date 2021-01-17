@@ -3,10 +3,26 @@
   "description": "An original Nextra theme for blogs made by thinceller.",
   "version": "0.1.0",
   "author": "thinceller <thinceller@gmail.com>",
+  "devDependencies": {
+    "microbundle": "^0.13.0",
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "dist/*",
+    "index.js"
+  ],
   "license": "MIT",
   "main": "index.js",
+  "peerDependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1 || ^17.0.1",
+    "react-dom": "^16.13.1 || ^17.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/thinceller/nextra-theme-blog.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production microbundle src/*.ts -f cjs -o dist --no-sourcemap --jsx React.createElement --target node"
   }
 }
