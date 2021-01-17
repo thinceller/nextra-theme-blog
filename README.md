@@ -1,1 +1,1 @@
-# nextra-theme-blog
+# @thinceller/nextra-theme-blog
